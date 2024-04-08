@@ -1,0 +1,15 @@
+{
+  "site": {
+    "title": "Steve Werner",
+    "base_url": "https://steve-werner.de",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "favicon.png",
+    "logo": "favicon.png"
+  },
+  "metadata": {
+    "meta_author": "danielmoessner",
+    "meta_image": "/images/Team.jpg",
+    "meta_description": "Kreistagswahl am 26. Mai 2024: Liste 1 Listenplatz 25: Alle drei Stimmen für Steve Werner"
+  }
+}

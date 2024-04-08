@@ -1,0 +1,1 @@
+scp -r dist sftp_e_self@jpjochims.de@ssh.strato.de:.

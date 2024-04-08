@@ -1,0 +1,30 @@
+{
+  "main": [
+    {
+      "name": "Über mich",
+      "url": "/#ueber-mich"
+    },
+    {
+      "name": "Politische Arbeit",
+      "url": "/#ueber-mich"
+    },
+    {
+      "name": "Vision und Ziele",
+      "url": "/#vision-und-ziele"
+    },
+    {
+      "name": "Kontakt",
+      "url": "/#kontakt"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Impressum",
+      "url": "/impressum"
+    },
+    {
+      "name": "Datenschutz",
+      "url": "/datenschutz"
+    }
+  ]
+}
