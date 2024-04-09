@@ -5,31 +5,28 @@ import image from "@/images/person/contact.jpg";
 ---
 
 <section class="bg-[#e7e7e7]" id="kontakt">
-  <div class="container py-32">
+  <div class="container py-16 md:py-32">
     <div class="max-w-lg">
       <Heading title="Nehmen Sie mit Steve Werner Kontakt auf!" pre="Kontakt" />
     </div>
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid md:gap-8 md:grid-cols-2">
       <div>
         <p class="mt-7">Ich freue mich auf Ihre Kontaktaufnahme.</p>
         <p class="mt-2">
           Info: Am
-          <b>26. Mai 2024 ist Kreistagswahl</b>. <br />Ich stehe auf Liste 1
+          <b>26. Mai 2024 ist Kreistagswahl</b>. <br />Ich stehe auf Liste 3
           Listenplatz 25. <br />
           Über alle drei Stimmen würde ich mich sehr freuen.
         </p>
       </div>
       <div class="mt-7">
         <p>
-          Telefon: <b>1234</b>
-        </p>
-        <p>
           E-Mail: <b>kontakt@steve-werner.com</b>
         </p>
       </div>
     </div>
     <div class="pt-12">
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid gap-8 md:grid-cols-2">
         <div>
           <h3
             class="inline p-0.5 px-2 mt-4 text-xl leading-tight bg-white box-decoration-clone text-light bg-clip-border"
@@ -54,7 +51,7 @@ import image from "@/images/person/contact.jpg";
             <li>Angeln in meiner Freizeit</li>
           </ul>
         </div>
-        <div>
+        <div class="row-start-1 md:col-start-auto">
           <Image
             class="rounded-lg"
             src={image}
