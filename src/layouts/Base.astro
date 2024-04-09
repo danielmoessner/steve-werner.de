@@ -14,14 +14,15 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  navbg?: string;
 }
 
 // distructure frontmatters
-const { title, meta_title, description, image, noindex, canonical } =
+const { title, meta_title, description, image, noindex, canonical, navbg } =
   Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- favicon -->
@@ -66,9 +67,6 @@ const { title, meta_title, description, image, noindex, canonical } =
         description ? description : config.metadata.meta_description
       )}
     />
-
-    <!-- author from config.json -->
-    <meta name="author" content={config.metadata.meta_author} />
 
     <!-- og-title -->
     <meta
@@ -126,7 +124,7 @@ const { title, meta_title, description, image, noindex, canonical } =
   </head>
   <body>
     <TwSizeIndicator />
-    <Navigation />
+    <Navigation navbg={navbg} />
     <main id="main-content">
       <slot />
     </main>

@@ -1,5 +1,7 @@
 ---
 import Heading from "./Heading.astro";
+import image from "@/images/person/network.jpg";
+import { Image } from "astro:assets";
 ---
 
 <section class="bg-[#e7e7e7]" id="ueber-mich">
@@ -17,20 +19,25 @@ import Heading from "./Heading.astro";
             Bereits in der Schule war ich als Schülersprecher aktiv und
             unternahm alles, um die Interessen der Schülerschaft konstruktiv
             voranzutreiben.
-
-            <p>
-              Seit 2021 bin ich Mitglied der CDU-Saale-Orla und arbeite proaktiv
-              für die Belange unseres schönen Landkreises.
-            </p>
-            <p>
-              Neben meiner Arbeit in verschiedenen Vereinen in der Region bin
-              ich seit 2023 als stellvertretender Kreisvorsitzender der Jungen
-              Union Saale-Orla aktiv. Dabei versuche ich den Jugendlichen
-              verschiedene politische Weiterbildungsangebote zu machen und die
-              junge Gemeinschaft in unserer Heimat zu stärken.
-            </p>
+          </p>
+          <p>
+            Seit 2021 bin ich Mitglied der CDU-Saale-Orla und arbeite proaktiv
+            für die Belange unseres schönen Landkreises.
+          </p>
+          <p>
+            Neben meiner Arbeit in verschiedenen Vereinen in der Region bin ich
+            seit 2023 als stellvertretender Kreisvorsitzender der Jungen Union
+            Saale-Orla aktiv. Dabei versuche ich den Jugendlichen verschiedene
+            politische Weiterbildungsangebote zu machen und die junge
+            Gemeinschaft in unserer Heimat zu stärken.
           </p>
         </div>
+        <Image
+          class="mt-12 rounded shadow-sm"
+          src={image}
+          width={418 * 2}
+          alt=""
+        />
       </div>
       <div>
         <Heading title="Mein Werdegang" pre="" />

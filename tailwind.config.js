@@ -28,6 +28,15 @@ module.exports = {
       padding: "2rem",
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: [{
+            h4: {
+              fontSize: "1em",
+            },
+          }],
+        }
+      }),
       colors: {
         text: "#1b191d",
         dark: "#2b3246",
@@ -44,6 +53,7 @@ module.exports = {
         h3: h3 + "rem",
         "h3-sm": h3 * 0.8 + "rem",
         h4: h4 + "rem",
+        "h4-sm": h4 * 0.8 + "rem",
         h5: h5 + "rem",
         h6: h6 + "rem",
       },

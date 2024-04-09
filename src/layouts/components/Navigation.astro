@@ -16,6 +16,7 @@ export interface NavigationLink {
 
 const { main }: { main: NavigationLink[] } = menu;
 const { pathname } = Astro.url;
+const { navbg = "bg-transparent" } = Astro.props;
 ---
 
 <script>
@@ -26,9 +27,7 @@ const { pathname } = Astro.url;
   });
 </script>
 
-<header
-  class="absolute top-0 left-0 right-0 z-30 bg-transparent header font-heading"
->
+<header class=`absolute top-0 left-0 right-0 z-30 header font-heading ${navbg}`>
   <nav
     class="container relative flex flex-wrap items-center justify-between navbar"
   >
@@ -62,7 +61,7 @@ const { pathname } = Astro.url;
           <li class="nav-item">
             <a
               href={menu.url}
-              class={`p-3 text-dark transition uppercase tracking-wide hover:text-dark hover:bg-secondary lg:px-2 flex items-center lg:h-14 auto-close-nav ${
+              class={`p-3 text-white transition uppercase tracking-wider hover:text-dark font-medium hover:bg-secondary lg:px-2 flex items-center lg:h-14 auto-close-nav ${
                 (pathname === `${menu.url}/` || pathname === menu.url) &&
                 "active"
               }`}

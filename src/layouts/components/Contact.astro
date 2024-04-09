@@ -1,5 +1,7 @@
 ---
 import Heading from "./Heading.astro";
+import { Image } from "astro:assets";
+import image from "@/images/person/contact.jpg";
 ---
 
 <section class="bg-[#e7e7e7]" id="kontakt">
@@ -22,32 +24,44 @@ import Heading from "./Heading.astro";
           Telefon: <b>1234</b>
         </p>
         <p>
-          E-Mail: <b>kontakt@steve-werner.de</b>
+          E-Mail: <b>kontakt@steve-werner.com</b>
         </p>
       </div>
     </div>
     <div class="pt-12">
-      <h3
-        class="inline p-0.5 px-2 mt-4 text-xl leading-tight bg-white box-decoration-clone text-light bg-clip-border"
-      >
-        Leidenschaften
-      </h3>
-      <p class="mt-3">Bin ich nicht am arbeiten findet man mich hier:</p>
-      <ul class="pl-6 space-y-0.5 mt-1 text-sm list-disc">
-        <li>
-          Passionierter Jungjäger und Mitglied in der Jägerschaft Lobenstein
-        </li>
-        <li>
-          Aktives Mitglied in der Einsatzabteilung der Freiwilligen Feuerwehr
-          Gefell sowie Mitglied im Feuerwehrverein Gefell e.V.
-        </li>
-        <li>Naturliebhaber. Outdoorsportler (Joggen/Mountainbiken)</li>
-        <li>Hobby-Landwirt</li>
-        <li>
-          Motorflugbegeistert – Privatpilot für einmotorige Propellermaschinen
-        </li>
-        <li>Angeln in meiner Freizeit</li>
-      </ul>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <h3
+            class="inline p-0.5 px-2 mt-4 text-xl leading-tight bg-white box-decoration-clone text-light bg-clip-border"
+          >
+            Leidenschaften
+          </h3>
+          <p class="mt-3">Bin ich nicht am arbeiten findet man mich hier:</p>
+          <ul class="pl-6 space-y-0.5 mt-1 text-sm list-disc">
+            <li>
+              Passionierter Jungjäger und Mitglied in der Jägerschaft Lobenstein
+            </li>
+            <li>
+              Aktives Mitglied in der Einsatzabteilung der Freiwilligen
+              Feuerwehr Gefell sowie Mitglied im Feuerwehrverein Gefell e.V.
+            </li>
+            <li>Naturliebhaber. Outdoorsportler (Joggen/Mountainbiken)</li>
+            <li>Hobby-Landwirt</li>
+            <li>
+              Motorflugbegeistert – Privatpilot für einmotorige
+              Propellermaschinen
+            </li>
+            <li>Angeln in meiner Freizeit</li>
+          </ul>
+        </div>
+        <div>
+          <Image
+            class="rounded-lg"
+            src={image}
+            alt="Steve Werner bei der Feuerwehr"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>

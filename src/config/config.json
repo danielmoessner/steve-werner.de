@@ -1,15 +1,21 @@
 {
   "site": {
     "title": "Steve Werner",
-    "base_url": "https://steve-werner.de",
+    "base_url": "https://steve-werner.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "favicon.png",
     "logo": "favicon.png"
   },
+  "person": {
+    "name": "Steve Werner",
+    "street": "Frössen 46a",
+    "city": "Gefell",
+    "zip": "07926"
+  },
   "metadata": {
-    "meta_author": "danielmoessner",
-    "meta_image": "/images/Team.jpg",
-    "meta_description": "Kreistagswahl am 26. Mai 2024: Liste 1 Listenplatz 25: Alle drei Stimmen für Steve Werner"
+    "meta_author": "Steve Werner",
+    "meta_image": "/images/contact.jpg",
+    "meta_description": "Der Saale-Orla-Kreis kann mehr! Als ihr künftiges Kreistagsmitglied will ich diesen wunderschönen Landkreis mit vorwärtsentwickeln. Kreistagswahl am 26. Mai 2024: Liste 3 Listenplatz 25: Alle drei Stimmen für Steve Werner"
   }
 }
