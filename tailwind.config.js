@@ -41,7 +41,7 @@ module.exports = {
         text: "#1b191d",
         dark: "#2b3246",
         primary: "#52b7c1",
-        secondary: "#ffa600",
+        secondary: "#f9b31d",
         body: "#fff",
       },
       fontSize: {
