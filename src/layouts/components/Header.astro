@@ -6,6 +6,7 @@ import image2 from "@/images/person/bike.jpg";
 import image3 from "@/images/person/jaeger.jpg";
 import image4 from "@/images/person/traktor.jpg";
 import image5 from "@/images/person/kuh.jpg";
+import vote from "@/images/vote.svg?raw";
 
 const all = [image0, image1, image2, image3, image4, image5];
 let img = all[1];
@@ -23,7 +24,7 @@ let img = all[1];
       <div class="flex items-center justify-center">
         <div class="grid grid-cols-12 gap-8">
           <div class="flex items-center col-span-12 md:col-span-6">
-            <div class="md:pb-48">
+            <div class="">
               <div class="flex flex-col-reverse pt-14">
                 <div>
                   <h1
@@ -52,6 +53,9 @@ let img = all[1];
                   drei Stimmen für Steve Werner
                 </b>
               </p>
+              <div class="relative w-48 -m-2">
+                <Fragment set:html={vote} />
+              </div>
             </div>
           </div>
           <div class="relative z-10 col-span-12 md:col-span-6">

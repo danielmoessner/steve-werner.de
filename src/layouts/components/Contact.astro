@@ -2,6 +2,7 @@
 import Heading from "./Heading.astro";
 import { Image } from "astro:assets";
 import image from "@/images/person/contact.jpg";
+import vote from "@/images/vote.svg?raw";
 ---
 
 <section class="bg-[#e7e7e7]" id="kontakt">
@@ -31,6 +32,9 @@ import image from "@/images/person/contact.jpg";
         <p>
           E-Mail: <b>kontakt@steve-werner.com</b>
         </p>
+        <div class="relative w-48">
+          <Fragment set:html={vote} />
+        </div>
       </div>
     </div>
     <div class="pt-12">
