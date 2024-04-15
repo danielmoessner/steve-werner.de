@@ -1,6 +1,7 @@
 ---
 import Heading from "./Heading.astro";
-import image from "@/images/person/network.jpg";
+import image1 from "@/images/person/werdegang.jpg";
+import image2 from "@/images/person/network.jpg";
 import { Image } from "astro:assets";
 ---
 
@@ -8,7 +9,7 @@ import { Image } from "astro:assets";
   <div class="container pt-16 pb-24 md:pb-32 md:pt-36">
     <div class="grid gap-8 md:grid-cols-2">
       <div>
-        <Image class="rounded shadow-sm" src={image} width={418 * 2} alt="" />
+        <Image class="rounded shadow-sm" src={image1} width={418 * 2} alt="" />
       </div>
       <div>
         <Heading title="Mein Werdegang" pre="Über mich" />
@@ -95,7 +96,7 @@ import { Image } from "astro:assets";
       <div>
         <Image
           class="mt-8 rounded shadow-sm"
-          src={image}
+          src={image2}
           width={418 * 2}
           alt=""
         />
