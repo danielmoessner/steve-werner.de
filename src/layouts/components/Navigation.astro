@@ -61,7 +61,7 @@ const { navbg = "bg-transparent" } = Astro.props;
           <li class="nav-item">
             <a
               href={menu.url}
-              class={`p-3 text-dark transition uppercase tracking-wider hover:font-bold font-medium hover:bg-secondary lg:px-2 flex items-center lg:h-14 auto-close-nav ${
+              class={`p-3 text-dark transition uppercase tracking-wider hover:font-bold md:hover:font-medium font-medium hover:bg-secondary lg:px-2 flex items-center lg:h-14 auto-close-nav ${
                 (pathname === `${menu.url}/` || pathname === menu.url) &&
                 "active"
               }`}
