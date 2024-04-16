@@ -1,18 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import image0 from "@/images/person/header2.jpg";
-import image1 from "@/images/person/feuerwehr.jpg";
-import image2 from "@/images/person/bike.jpg";
-import image3 from "@/images/person/jaeger.jpg";
-import image4 from "@/images/person/traktor.jpg";
-import image5 from "@/images/person/kuh.jpg";
-import vote from "@/images/vote.svg?raw";
-
-const all = [image0, image1, image2, image3, image4, image5];
-let img = all[1];
-// setTimeout(() => {
-//   img = all[(all.indexOf(img) + 1) % all.length];
-// }, 5000);
+import Votes from "./Votes.astro";
+import Slider from "./Slider.astro";
 ---
 
 <section>
@@ -23,7 +13,7 @@ let img = all[1];
     <div class="container relative mx-auto">
       <div class="flex items-center justify-center">
         <div class="grid grid-cols-12 gap-8">
-          <div class="flex items-center col-span-12 md:col-span-6">
+          <div class="flex items-center col-span-12 md:pb-10 md:col-span-6">
             <div class="">
               <div class="flex flex-col-reverse pt-14">
                 <div>
@@ -41,47 +31,37 @@ let img = all[1];
                   </h2>
                 </div>
               </div>
+              <div class="relative mt-6 md:hidden">
+                <Image
+                  class="rounded-xl"
+                  src={image0}
+                  width={418 * 2}
+                  alt="Stever Werner im Anzug"
+                />
+                <div class="absolute bottom-10 right-10">
+                  <Votes />
+                </div>
+              </div>
               <p class="mt-8 text-lg font-medium text-white">
                 Der Saale-Orla-Kreis kann mehr! Als ihr künftiges
                 Kreistagsmitglied will ich diesen wunderschönen Landkreis mit
-                vorwärtsentwickeln. <br />
-                <br />
+                vorwärtsentwickeln.
+                <div class="hidden -my-4 transform scale-75 md:block">
+                  <Votes />
+                </div>
+              </p>
+              <div class="mt-4 md:mt-0">
                 <b
                   class="inline px-2 py-1 leading-none bg-secondary text-dark box-decoration-clone"
                 >
-                  Kreistagswahl am 26. Mai 2024: Liste 3 Listenplatz 25: Alle
-                  drei Stimmen für Steve Werner
+                  Kreistagswahl am 26. Mai 2024: Liste 3 Listenplatz 25: <br />
+                  Alle drei Stimmen für Steve Werner
                 </b>
-              </p>
-              <div class="relative w-48 -m-2">
-                <Fragment set:html={vote} />
               </div>
             </div>
           </div>
-          <div class="relative z-10 col-span-12 md:col-span-6">
-            <div class="w-full h-full md:absolute aspect-[836/1029]">
-              <div
-                x-data="{active: 0}"
-                x-init="setInterval(() => { active = (active + 1) % 6 }, 7000)"
-                class="flex items-center relative w-full rounded-xl aspect-[836/1029] overflow-hidden"
-              >
-                {
-                  all.map((i, index) => (
-                    <Image
-                      class="absolute z-10 w-full duration-1000 ease-linear transform aspect-[836/1029] object-cover object-center"
-                      x-show={`active == ${index}`}
-                      x-transition:enter-start="translate-x-full"
-                      x-transition:enter-end="translate-x-0"
-                      x-transition:leave-start="translate-x-0"
-                      x-transition:leave-end="-translate-x-full"
-                      src={i}
-                      width={418 * 2}
-                      alt=""
-                    />
-                  ))
-                }
-              </div>
-            </div>
+          <div class="relative z-10 hidden col-span-12 md:col-span-6 md:block">
+            <Slider />
           </div>
         </div>
       </div>
