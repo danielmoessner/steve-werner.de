@@ -7,8 +7,6 @@ import image4 from "@/images/person/traktor.jpg";
 import image5 from "@/images/person/kuh.jpg";
 import { Image } from "astro:assets";
 
-const all = [image0, image1, image2, image3, image4, image5];
-
 const items: [ImageMetadata, string][] = [
   [
     image0,
@@ -23,8 +21,6 @@ const items: [ImageMetadata, string][] = [
   ],
   [image5, "Bauern denken nicht in Wahlperioden, sondern in Generationen!"],
 ];
-
-const { hideText } = Astro.props;
 ---
 
 <div class="w-full h-full md:absolute aspect-[836/1029]">
@@ -49,10 +45,7 @@ const { hideText } = Astro.props;
             width={418 * 2}
             alt=""
           />
-          <div
-            class="absolute bottom-0 block w-full px-2 py-1 font-bold text-center text-dark bg-secondary"
-            class:list={{ hidden: hideText }}
-          >
+          <div class="absolute bottom-0 block w-full px-2 py-1 font-bold text-center text-dark bg-secondary">
             {i[1]}
           </div>
         </div>
