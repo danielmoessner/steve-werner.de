@@ -23,6 +23,8 @@ const items: [ImageMetadata, string][] = [
   ],
   [image5, "Bauern denken nicht in Wahlperioden, sondern in Generationen!"],
 ];
+
+const { hideText } = Astro.props;
 ---
 
 <div class="w-full h-full md:absolute aspect-[836/1029]">
@@ -47,7 +49,10 @@ const items: [ImageMetadata, string][] = [
             width={418 * 2}
             alt=""
           />
-          <div class="absolute bottom-0 block w-full px-2 py-1 font-bold text-center text-dark bg-secondary">
+          <div
+            class="absolute bottom-0 block w-full px-2 py-1 font-bold text-center text-dark bg-secondary"
+            class:list={{ hidden: hideText }}
+          >
             {i[1]}
           </div>
         </div>

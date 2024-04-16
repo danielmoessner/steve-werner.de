@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import image0 from "@/images/person/header2.jpg";
 import Votes from "./Votes.astro";
 import Slider from "./Slider.astro";
 ---
@@ -32,13 +30,8 @@ import Slider from "./Slider.astro";
                 </div>
               </div>
               <div class="relative mt-6 overflow-hidden md:hidden">
-                <Image
-                  class="rounded-xl"
-                  src={image0}
-                  width={418 * 2}
-                  alt="Stever Werner im Anzug"
-                />
-                <div class="absolute -bottom-5 -right-8">
+                <Slider hideText />
+                <div class="absolute z-20 -bottom-5 -right-8">
                   <Votes />
                 </div>
               </div>
