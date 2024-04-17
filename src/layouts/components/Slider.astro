@@ -23,21 +23,59 @@ const items: [ImageMetadata, string][] = [
 ];
 ---
 
-<div class="w-full h-full md:absolute aspect-[836/1029]">
+<div
+  x-data="{ active: 0, auto: true }"
+  x-init="setInterval(() => { if (!auto) return; active = (active + 1) % 6; }, 7000)"
+  class="w-full h-full md:absolute aspect-[836/1029]"
+>
   <div
-    x-data="{active: 0}"
-    x-init="setInterval(() => { active = (active + 1) % 6 }, 7000)"
     class="flex items-center relative w-full rounded-xl aspect-[836/1029] overflow-hidden"
   >
+    <button
+      @click="() => { active = active - 1; auto = false; if (active < 0) active = 5; }"
+      class="absolute top-0 bottom-0 left-0 z-30 h-20 px-4 my-auto text-white transition rounded-r bg-gray-900/20 hover:bg-gray-900/50"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+      </svg>
+    </button>
+    <button
+      @click="() => { active = (active + 1) % 6; auto = false; }"
+      class="absolute top-0 bottom-0 right-0 z-30 h-20 px-4 my-auto text-white transition rounded-l bg-gray-900/20 hover:bg-gray-900/50"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+      </svg>
+    </button>
     {
       items.map((i, index) => (
         <div
-          class="absolute z-10 w-full duration-1000 ease-linear transform "
+          class="absolute z-10 w-full transition duration-1000 transform "
           x-show={`active == ${index}`}
-          x-transition:enter-start="translate-x-full"
-          x-transition:enter-end="translate-x-0"
-          x-transition:leave-start="translate-x-0"
-          x-transition:leave-end="-translate-x-full"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
         >
           <Image
             class="aspect-[836/1029] object-cover object-center"
